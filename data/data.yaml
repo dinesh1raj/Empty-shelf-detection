@@ -1,0 +1,13 @@
+train: ../data/train/images
+val: ../data/valid/images
+test: ../data/test/images
+
+nc: 1
+names: ['empty']
+
+roboflow:
+  workspace: fyp-ormnr
+  project: supermarket-empty-shelf-detector
+  version: 4
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/fyp-ormnr/supermarket-empty-shelf-detector/dataset/4
