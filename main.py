@@ -26,7 +26,7 @@ def upload_image():
 		filename = secure_filename(file.filename)
 		file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 		path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-		os.system(f'python3 yolov5/detect.py --weights yolov5/runs/train/exp2/weights/best.pt --source {path} --conf 0.5 --hide-conf --hide-label --project ./static --name uploads --exist-ok')
+		os.system(f'python3 yolov5/detect.py --weights yolov5/runs/train/exp4/weights/best.pt --source {path} --conf 0.5 --iou-thres 0.25 --hide-conf --hide-label --project ./static --name uploads --exist-ok')
 		#print('upload_image filename: ' + filename)
 		flash('Empty spaces detected below:')
 		return render_template('upload.html', filename=filename)
